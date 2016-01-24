@@ -1,8 +1,8 @@
-dropper (0.2.0-0extras15.10.0) wily; urgency=medium
+dropper (0.2.0-0extras15.10.1) wily; urgency=medium
 
   * Upgraded to Wily
 
- -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 24 Jan 2016 10:07:23 +0100
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 24 Jan 2016 11:13:49 +0100
 
 dropper (0.2.0-0extras12.10.4) quantal; urgency=low
 
