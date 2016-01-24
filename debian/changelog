@@ -1,0 +1,13 @@
+dropper (0.2.0-0extras15.10.0) wily; urgency=medium
+
+  * Upgraded to Wily
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 24 Jan 2016 10:07:23 +0100
+
+dropper (0.2.0-0extras12.10.4) quantal; urgency=low
+
+  * Added CMY and CMYK scales
+  * Changed RAL and Hexadecimal tables from combobox to treeview
+  * Added help and social menus
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Sun, 24 Feb 2013 11:54:46 +0100

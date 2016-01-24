@@ -1,0 +1,15 @@
+[Desktop Entry]
+Encoding = UTF-8
+_Name = Dropper
+Version = 0.0.1.0
+_Comment = A color capturer
+_GenericName = Dropper
+Terminal = false
+Icon = /opt/extras.ubuntu.com/dropper/share/dropper/dropper.svg
+Type = Application
+Exec = /opt/extras.ubuntu.com/dropper/bin/dropper
+Categories = Utility;
+$Name[es] = _('Dropper')
+$Comment[es] = _('A color capturer')
+$GenericName[es] = _('Dropper')
+

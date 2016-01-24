@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding = UTF-8
+Name = Dropper
+Version = 0.0.1.0
+Comment = A color capturer
+GenericName = Dropper
+Terminal = false
+Icon = /opt/extras.ubuntu.com/dropper/share/dropper/dropper.svg
+Type = Application
+Exec = /opt/extras.ubuntu.com/dropper/bin/dropper
+Categories = Utility;
+Name[es] = Dropper
+Comment[es] = A color capturer
+GenericName[es] = Dropper
