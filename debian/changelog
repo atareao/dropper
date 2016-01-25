@@ -1,3 +1,9 @@
+dropper (0.2.1-0extras15.10.0) wily; urgency=medium
+
+  * First release to picker
+
+ -- Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>  Mon, 25 Jan 2016 20:55:44 +0100
+
 dropper (0.2.0-0extras15.10.1) wily; urgency=medium
 
   * Upgraded to Wily

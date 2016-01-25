@@ -103,6 +103,31 @@ def rgb2cmy(r,g,b):
 	
 def cmy2rgb(c,m,y):
 	return int(( 1. - c ) * 255.), int(( 1. - m ) * 255.), int(( 1.- y ) * 255.)
+
+def hsv2rgb2(h, s, v):
+	h = float(h)
+	s = float(s)/255.
+	v = float(v)/255.
+	c = v * s
+	x = c * 1. -abs((h/60.) % 2. - 1.)
+	m = v -c
+	if h < 60:
+		rp,gp,bp = c,x,0
+	elif h>=60 and h <120:
+		rp,gp,bp = x,c,0
+	elif h>=120 and h <180:
+		rp,gp,bp = 0,c,x
+	elif h>=180 and h <240:
+		rp,gp,bp = 0,x,c
+	elif h>=240 and h <300:
+		rp,gp,bp = x,0,c
+	elif h>=300 and h <=360:
+		rp,gp,bp = c,0,x
+	
+	r = (rp+m)*255
+	g = (gp+m)*255
+	b = (bp+m)*255
+	return r,g,b
 	
 def hsv2rgb(h, s, v):
     h = float(h)
@@ -414,14 +439,15 @@ class ColorWheel(Gtk.DrawingArea):
 		print('#####################################################')
 		print(event.x,event.y)
 		x = event.x - self.get_allocation().width/2.0
-		y = self.get_allocation().height/2.0 - event.y
-		print(x,y)
+		y = event.y - self.get_allocation().height/2.0
 		hue = math.atan(x/y)*180./math.pi + 90.
 		sat = math.sqrt(math.pow(x,2.)+math.pow(y,2.))/(self.get_allocation().width/2.)
 		if sat <= 1:
-			print (hue,sat)
-			r,g,b = hsv2rgb(hue,sat,1.0)
+			#r,g,b = hsv2rgb(hue,sat,self.value/255.0)
+			print(hue/255.,sat*255.)
+			r,g,b = hsv2rgb(hue,sat,255.)
 			self.rgb = [r,g,b]
+			print(self.rgb)
 
 class Dropper(Gtk.Window):     
 	def __init__(self):
@@ -1100,6 +1126,8 @@ class Dropper(Gtk.Window):
 		self.image.set_pixbuf(self.acapturer.pb)
 
 	def on_color_wheel_clicked(self,widget,event):
+		r,g,b = widget.rgb
+		print(r,g,b)
 		pointer,x,y,mods = self.get_screen().get_root_window().get_pointer()
 		color = get_pixel_colour(x,y)
 		if color is not None:
